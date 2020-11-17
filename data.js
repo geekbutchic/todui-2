@@ -1,6 +1,6 @@
 const data = {
   todos: [
-    {
+    { 
       text: "make todo app better",
       isComplete: true,
       priority: 1
@@ -19,7 +19,7 @@ const data = {
       text: "read book for book club",
       isComplete: false,
       priority: 2
-    },
+    },  
     {
       text: "internalize what a callback is",
       isComplete: true,
