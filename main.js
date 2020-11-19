@@ -1,4 +1,5 @@
 const readline = require('readline');
+const { todos } = require('./data.js');
 const data = require('./data.js');
 // Step 1.
 
@@ -36,6 +37,23 @@ Your options are:
 //   }
 // };
 
+const add = function(userInput) {
+  const todo = {
+    text: userInput,
+    isComplete: false,
+    priority: 2,
+  }
+
+  todos.unshift(todo);
+  console.clear();
+  console.log('Your todos are:')
+  for (const todo of todos) {
+    console.log('* ' + todo.text);
+  }
+
+  interface.question(menu, handleMenu);
+}
+
 const handleMenu = function (cmd) {
   switch (cmd) {
     case '6':
@@ -61,16 +79,6 @@ const handleMenu = function (cmd) {
     // default is what would print out non of the values match.
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 const printToDos = () => {
   console.log('Here are your todos!')
